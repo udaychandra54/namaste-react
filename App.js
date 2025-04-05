@@ -1,10 +1,14 @@
-const heading = React.createElement(
-  "h1",
-  { id: "headingEl" },
-  "Hello world from react"
-);
-heading.innerHTML = "namaste react";
+import React from "react";
+import Header from "./src/components/Header";
+import Body from "./src/components/Body";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const App = () => {
+  return (
+    <>
+      <Header />
+      <Body />
+    </>
+  );
+};
 
-root.render(heading);
+export default App;
