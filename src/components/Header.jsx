@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const [status, setStatus] = useState("Login");
@@ -22,10 +23,17 @@ const Header = () => {
       </div>
       <div className="nav-container">
         <ul className="nav-items">
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to={"/about"}>About Us</NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact">Contact Us</NavLink>
+          </li>
           <li>Cart</li>
+
           <li>
             <button onClick={handleStatus}>{status}</button>
           </li>
